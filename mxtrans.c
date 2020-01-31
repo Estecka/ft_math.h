@@ -2,13 +2,13 @@
 
 /*
 ** Transposes a matrix of size n*n.
-** @param float* m  The matrix to be transposed
-** @param float* mt The destination matrix.
-** 	The destination can be either different or the same as the source.
+** @param t_mx m  The matrix to be transposed
+** @param t_mx mt The destination matrix.
+** 	The destination can be the same as the source.
 ** @param int n The size of the matrix.
 */
 
-extern void	mxtrans(float *m, float *mt, int n)
+extern void	mxtrans(t_mx m, t_mx mt, unsigned int n)
 {
 	unsigned int	x;
 	unsigned int	y;
@@ -20,9 +20,9 @@ extern void	mxtrans(float *m, float *mt, int n)
 		x = y;
 		while(x < n)
 		{
-			f = m[x + (n * y)];
-			mt[x + (n * y)] = m[y + (n * x)];
-			mt[y + (n * x)] = f;
+			f = m[x][y];
+			mt[x][y] = m[y][x];
+			mt[y][x] = f;
 			x++;
 		}
 		y++;
