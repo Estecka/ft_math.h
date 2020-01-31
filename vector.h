@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:46:00 by abaur             #+#    #+#             */
-/*   Updated: 2020/01/31 14:47:50 by abaur            ###   ########.fr       */
+/*   Updated: 2020/01/31 15:06:00 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,30 +39,25 @@ struct	s_v4
 	float	w;
 };
 
-union	u_v
+union	u_v2
+{
+	t_v2		array;
+	struct s_v2	vec2;
+};
+
+union	u_v3
+{
+	t_v3		array;
+	struct s_v3	vec3;
+	struct s_v2	vec2;
+};
+
+union	u_v4
 {
 	t_v4		array;
 	struct s_v4	vec4;
 	struct s_v3	vec3;
 	struct s_v2	vec2;
-};
-
-union	u_v2
-{
-	struct s_v2	axes;
-	t_v2		array;
-};
-
-union	u_v3
-{
-	struct s_v3	axes;
-	t_v3		array;
-};
-
-union	u_v4
-{
-	struct s_v4	axes;
-	t_v4		array;
 };
 
 #endif
