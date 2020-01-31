@@ -1,5 +1,5 @@
 SRCS = \
-	mxtrans.c \
+	mxtrans.c mxadj.c \
 
 OBJS = ${SRCS:.c=.o}
 

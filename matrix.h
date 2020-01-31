@@ -8,4 +8,6 @@ typedef float		t_mx2[2][2];
 
 void	mxtrans(t_mx matrix, t_mx destination, unsigned int rank);
 
+void	mx3adjt(t_mx3 transposed, t_mx3 destination);
+
 #endif
