@@ -2,6 +2,7 @@ SRCS = \
 	mxtrans.c mxadj.c \
 	vector.c crossp.c \
 	floatminmax.c \
+	figcontain.c \
 
 OBJS = ${SRCS:.c=.o}
 
