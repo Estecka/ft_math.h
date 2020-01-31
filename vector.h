@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:46:00 by abaur             #+#    #+#             */
-/*   Updated: 2020/01/31 15:12:38 by abaur            ###   ########.fr       */
+/*   Updated: 2020/01/31 15:53:25 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ union		u_v4
 	struct s_v3	vec3;
 	struct s_v2	vec2;
 };
+
+union u_v2	subvec2(t_v2 fro, t_v2 to);
+union u_v3	subvec3(t_v3 fro, t_v3 to);
 
 float		crossp2(t_v2 i, t_v2 j);
 union u_v3	crossp3(t_v3 i, t_v3 j);
