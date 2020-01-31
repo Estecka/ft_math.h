@@ -1,6 +1,7 @@
 SRCS = \
 	mxtrans.c mxadj.c \
 	crossp.c \
+	floatminmax.c \
 
 OBJS = ${SRCS:.c=.o}
 
