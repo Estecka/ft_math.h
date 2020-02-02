@@ -23,7 +23,10 @@ void	mxtrans(t_mx matrix, t_mx destination, unsigned int rank);
 void	mx3adj(t_mx3 matrix, t_mx3 destination);
 void	mx3adjt(t_mx3 transposed, t_mx3 destination);
 
-void	mx2det(t_mx2 matrix);
-void	mx3det(t_mx3 matrix);
+float	mx2det(t_mx2 matrix);
+float	mx3det(t_mx3 matrix);
+void	mx2inv(t_mx2 m, t_mx2 mi)
+void	mx2inv(t_mx2 m, t_mx2 mi)
+
 
 #endif
