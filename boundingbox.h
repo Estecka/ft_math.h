@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_math.h                                          :+:      :+:    :+:   */
+/*   boundingbox.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/31 15:31:39 by abaur             #+#    #+#             */
-/*   Updated: 2020/01/31 16:13:24 by abaur            ###   ########.fr       */
+/*   Created: 2020/01/31 16:12:50 by abaur             #+#    #+#             */
+/*   Updated: 2020/01/31 16:31:45 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MATH_H
-# define FT_MATH_H
+#ifndef BOUNDINGBOX_H
+# define BOUNDINGBOX_H
 
 # include "vector.h"
-# include "matrix.h"
 # include "figure.h"
-# include "boundingbox.h"
 
-float	minf3(float a, float b, float c);
-float	maxf3(float a, float b, float c);
-float	minf4(float a, float b, float c, float d);
-float	maxf4(float a, float b, float c, float d);
+typedef struct s_bbox	t_bbox;
+struct s_bbox {
+	union u_v3	min;
+	union u_v3	max;
+}
+
+void	bbinit(struct s_bbox *this, t_v3 point);
+void	bbpoint(struct s_bbox *this, t_v3 point);
+
+void	bbtri(struct s_bbox *this, t_tri triangle);
+void	bbquad(struct s_bbox *this, t_quad quadrilater);
 
 #endif
