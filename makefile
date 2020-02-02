@@ -1,6 +1,6 @@
 SRCS = \
-	mxtrans.c mxadj.c \
-	vector.c crossp.c \
+	mxdet.c mxtrans.c mxadj.c mxinv.c mxm.c mxv.c \
+	subvec.c crossp.c cartesian.c \
 	floatminmax.c \
 	figcontain.c \
 
