@@ -60,6 +60,8 @@ union		u_v4
 	struct s_v2	vec2;
 };
 
+union u_v2	addvec2(t_v2 v1, t_v2 v2);
+union u_v3	addvec3(t_v3 v1, t_v3 v2);
 union u_v2	subvec2(t_v2 fro, t_v2 to);
 union u_v3	subvec3(t_v3 fro, t_v3 to);
 
