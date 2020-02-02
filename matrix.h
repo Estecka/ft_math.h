@@ -41,4 +41,7 @@ void		mxm2(t_mx2 parent, t_mx2 child, t_mx2 destination);
 void		mxm3(t_mx3 parent, t_mx3 child, t_mx3 destination);
 void		mxm4(t_mx4 parent, t_mx4 child, t_mx4 destination);
 
+union u_v3	cartesian(t_v4 vector);
+union u_v4	homegeneous(t_v3 vector, t_mx4 matrix);
+
 #endif
