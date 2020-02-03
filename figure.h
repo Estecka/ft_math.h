@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 16:12:50 by abaur             #+#    #+#             */
-/*   Updated: 2020/01/31 16:31:45 by abaur            ###   ########.fr       */
+/*   Updated: 2020/02/03 11:52:26 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ struct	s_quad
 union	u_tri
 {
 	t_tri			array;
-	struct	s_tri	points;
+	struct s_tri	points;
 };
 
 union	u_quad
 {
 	t_quad			array;
-	struct	s_quad	points;
+	struct s_quad	points;
 };
 
 short	tricontain(t_v2 point, t_tri triangle);

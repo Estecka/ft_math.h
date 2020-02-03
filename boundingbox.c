@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 15:17:27 by abaur             #+#    #+#             */
-/*   Updated: 2020/02/03 11:41:00 by abaur            ###   ########.fr       */
+/*   Updated: 2020/02/03 11:50:03 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** @param t_v3 point The point to use as initializer.
 */
 
-extern void bbinit(t_bbox *this, t_v3 point)
+extern void		bbinit(t_bbox *this, t_v3 point)
 {
 	this->min = *(union u_v3*)point;
 	this->max = *(union u_v3*)point;
@@ -32,7 +32,7 @@ extern void bbinit(t_bbox *this, t_v3 point)
 ** @param t_v3 point The point to include.
 */
 
-extern void bbpoint(t_bbox *this, t_v3 point)
+extern void		bbpoint(t_bbox *this, t_v3 point)
 {
 	if (point[0] < this->min.vec3.x)
 		this->min.vec3.x = point[0];
@@ -54,7 +54,7 @@ extern void bbpoint(t_bbox *this, t_v3 point)
 ** @param t_tri tri The triangle to bind.
 */
 
-void	bbtri(t_bbox *this, t_tri tri)
+extern void		bbtri(t_bbox *this, t_tri tri)
 {
 	bbinit(this, tri[0].array);
 	bbpoint(this, tri[1].array);
@@ -67,7 +67,7 @@ void	bbtri(t_bbox *this, t_tri tri)
 ** @param t_quad quad The quadrilater to bind.
 */
 
-void	bbquad(t_bbox *this, t_quad quad)
+extern void		bbquad(t_bbox *this, t_quad quad)
 {
 	bbinit(this, quad[0].array);
 	bbpoint(this, quad[1].array);
@@ -84,11 +84,11 @@ void	bbquad(t_bbox *this, t_quad quad)
 ** 	false The point is outside or on the edges of the bounding box.
 */
 
-short	bbcontain(t_bbox *this, t_v3 p)
+extern short	bbcontain(t_bbox *this, t_v3 p)
 {
 	return (
 		this->min.vec3.x < p[0] && p[0] < this->max.vec3.x
 		&& this->min.vec3.y < p[1] && p[1] < this->max.vec3.y
 		&& this->min.vec3.z < p[2] && p[2] < this->max.vec3.z
-	);
-};
+);
+}

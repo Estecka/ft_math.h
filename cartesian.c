@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:26:03 by abaur             #+#    #+#             */
-/*   Updated: 2020/02/03 11:39:17 by abaur            ###   ########.fr       */
+/*   Updated: 2020/02/03 11:46:53 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@
 
 union u_v3	cartesian(t_v4 v)
 {
-	union u_v3 r;
-	float w;
+	union u_v3	r;
+	float		w;
 
 	if (v[3] != 1)
 	{
-		w = 1/v[3];
+		w = 1 / v[3];
 		r.vec3.x = v[0] * w;
 		r.vec3.y = v[1] * w;
 		r.vec3.z = v[2] * w;
@@ -46,9 +46,10 @@ union u_v3	cartesian(t_v4 v)
 ** 	[  0   0 m23   0]
 ** @return union u_v4 The homogeneous vector.
 */
+
 union u_v4	homegeneous(t_v3 v, t_mx4 m)
 {
-	union u_v4 r;
+	union u_v4	r;
 
 	r.vec3 = *(struct s_v3*)v;
 	r.vec4.w = -m[3][2] * ((m[2][2] * m[2][3]) - v[2]);
