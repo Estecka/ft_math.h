@@ -75,3 +75,21 @@ void	bbquad(t_bbox *this, t_quad quad)
 	bbpoint(this, quad[2]);
 	bbpoint(this, quad[3]);
 }
+
+/*
+** Checks whether a given point is contained in a bounding box.
+** @param t_bbox this The containing bounding box.
+** @param t_v3 this The point to check.
+** @param bool
+** 	true  The point is inside the bounding box.
+** 	false The point is outside or on the edges of the bounding box.
+*/
+
+short	bbcontain(t_bbox *this, t_v3 p)
+{
+	return (
+		this->min.vec3.x < p[0] && p[0] < this->max.vec3.x
+		&& this->min.vec3.y < p[1] && p[1] < this->max.vec3.y
+		&& this->min.vec3.z < p[2] && p[2] < this->max.vec3.z
+	);
+};

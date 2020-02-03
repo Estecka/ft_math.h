@@ -28,4 +28,6 @@ void	bbpoint(struct s_bbox *this, t_v3 point);
 void	bbtri(struct s_bbox *this, t_tri triangle);
 void	bbquad(struct s_bbox *this, t_quad quadrilater);
 
+short	bbcontain(struct s_bbox *this, t_v3 point);
+
 #endif
