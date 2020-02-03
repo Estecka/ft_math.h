@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 16:12:50 by abaur             #+#    #+#             */
-/*   Updated: 2020/02/03 11:18:30 by abaur            ###   ########.fr       */
+/*   Updated: 2020/02/03 11:24:36 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ void	bbquad(struct s_bbox *this, t_quad quadrilater);
 short	bbcontain(struct s_bbox *this, t_v3 point);
 short	bbinter(struct s_bbox *box1, struct s_bbox *box2);
 void	bbclip(struct s_bbox *this, struct s_bbox *box1, struct s_bbox *box2);
+
+short	bbisvalid(struct s_bbox *this);
 
 #endif

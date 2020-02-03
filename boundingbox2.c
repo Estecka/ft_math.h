@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 15:17:27 by abaur             #+#    #+#             */
-/*   Updated: 2020/02/03 11:19:53 by abaur            ###   ########.fr       */
+/*   Updated: 2020/02/03 11:33:43 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,21 @@ void	bbclip(t_bbox *this, t_bbox *b1, t_bbox *b2)
 	this->max.vec3.z = (b1->max.vec3.z < b2->max.vec3.z) ?
 		b1->max.vec3.z :
 		b2->max.vec3.z;
+}
+
+/*
+** Checks whether the given bounding box can contain any point.
+** @param t_bbox* this The bounding box to check.
+** @return bool
+** 	true  The bounding box ranges are strictly positive.
+**  false The bounding box is singular, or has at least one negative range.
+*/
+
+short	bbisvalid(struct s_bbox *this)
+{
+	return (
+		this->max.vec3.x > this->min.vec3.x
+		&& this->max.vec3.y > this->min.vec3.y
+		&& this->max.vec3.z > this->min.vec3.z
+	);
 }
