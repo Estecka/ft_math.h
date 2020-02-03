@@ -35,18 +35,18 @@ extern void bbinit(t_bbox *this, t_v3 point)
 
 extern void bbpoint(t_bbox *this, t_v3 point)
 {
-	if (point[0] < this->min.x)
-		this->min.x = point[0];
-	if (point[1] < this->min.y)
-		this->min.y = point[1];
-	if (point[2] < this->min.z)
-		this->min.z = point[2];
-	if (point[0] > this->max.x)
-		this->max.x = point[0];
-	if (point[1] > this->max.y)
-		this->max.y = point[1];
-	if (point[2] > this->max.z)
-		this->max.z = point[2];
+	if (point[0] < this->min.vec3.x)
+		this->min.vec3.x = point[0];
+	if (point[1] < this->min.vec3.y)
+		this->min.vec3.y = point[1];
+	if (point[2] < this->min.vec3.z)
+		this->min.vec3.z = point[2];
+	if (point[0] > this->max.vec3.x)
+		this->max.vec3.x = point[0];
+	if (point[1] > this->max.vec3.y)
+		this->max.vec3.y = point[1];
+	if (point[2] > this->max.vec3.z)
+		this->max.vec3.z = point[2];
 }
 
 /*
