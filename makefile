@@ -3,7 +3,7 @@ SRCS = \
 	addvec.c subvec.c crossp.c cartesian.c \
 	floatminmax.c \
 	figcontain.c \
-	boundingbox.c \
+	boundingbox.c boundingbox2.c \
 
 OBJS = ${SRCS:.c=.o}
 
