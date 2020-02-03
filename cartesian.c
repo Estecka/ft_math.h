@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:26:03 by abaur             #+#    #+#             */
-/*   Updated: 2020/01/31 12:43:40 by abaur            ###   ########.fr       */
+/*   Updated: 2020/02/03 11:39:17 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,11 @@ union u_v3	cartesian(t_v4 v)
 
 	if (v[3] != 1)
 	{
-		w = 1/v[3]
+		w = 1/v[3];
 		r.vec3.x = v[0] * w;
 		r.vec3.y = v[1] * w;
 		r.vec3.z = v[2] * w;
+		return (r);
 	}
 	else
 		return (*(union u_v3*)v);

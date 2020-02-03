@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 16:12:50 by abaur             #+#    #+#             */
-/*   Updated: 2020/02/03 11:24:36 by abaur            ###   ########.fr       */
+/*   Updated: 2020/02/03 11:39:31 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct s_bbox	t_bbox;
 struct s_bbox {
 	union u_v3	min;
 	union u_v3	max;
-}
+};
 
 void	bbinit(struct s_bbox *this, t_v3 point);
 void	bbpoint(struct s_bbox *this, t_v3 point);

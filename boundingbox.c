@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 15:17:27 by abaur             #+#    #+#             */
-/*   Updated: 2020/01/31 16:07:57 by abaur            ###   ########.fr       */
+/*   Updated: 2020/02/03 11:41:00 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ extern void bbinit(t_bbox *this, t_v3 point)
 {
 	this->min = *(union u_v3*)point;
 	this->max = *(union u_v3*)point;
-	return (this);
 }
 
 /*
@@ -57,9 +56,9 @@ extern void bbpoint(t_bbox *this, t_v3 point)
 
 void	bbtri(t_bbox *this, t_tri tri)
 {
-	bbinit(this, tri[0]);
-	bbpoint(this, tri[1]);
-	bbpoint(this, tri[2]);
+	bbinit(this, tri[0].array);
+	bbpoint(this, tri[1].array);
+	bbpoint(this, tri[2].array);
 }
 
 /*
@@ -70,10 +69,10 @@ void	bbtri(t_bbox *this, t_tri tri)
 
 void	bbquad(t_bbox *this, t_quad quad)
 {
-	bbinit(this, quad[0]);
-	bbpoint(this, quad[1]);
-	bbpoint(this, quad[2]);
-	bbpoint(this, quad[3]);
+	bbinit(this, quad[0].array);
+	bbpoint(this, quad[1].array);
+	bbpoint(this, quad[2].array);
+	bbpoint(this, quad[3].array);
 }
 
 /*
