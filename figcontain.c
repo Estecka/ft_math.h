@@ -16,15 +16,14 @@
 /*
 ** Checks wether a 2D triangle contains a given point.
 ** The points of the triangle should be provided in counter-clockwise order
-** @param t_v2 p The point to check against the triangle.
-** @param t_v2 a,b,c The points of the triangle, provided in counter-clockwise
-** order.
+** @param const t_v2 p The point to check against the triangle.
+** @param const t_tri tri The points of the triangle to check against
 ** @return bool
 ** 	true  The point is within the triangle.
 ** 	false The point is outside or on the edge of the triangle.
 */
 
-extern short	tricontain(t_v2 p, t_tri tri)
+extern short	tricontain(const t_v2 p, const t_tri tri)
 {
 	union u_v2 i;
 	union u_v2 j;
@@ -46,14 +45,14 @@ extern short	tricontain(t_v2 p, t_tri tri)
 
 /*
 ** Checks wether a 2D quadrilater contains a given point.
-** @param t_v2 p The point to check.
-** @param t_quad The quadrilater to check against.
+** @param const t_v2 p The point to check.
+** @param const t_quad The quadrilater to check against.
 ** @return bool
 ** 	true  The point lays within the figure.
 ** 	false The point is outside or on the edge of the figure.
 */
 
-extern short	quadcontain(t_v2 p, t_quad quad)
+extern short	quadcontain(const t_v2 p, const t_quad quad)
 {
 	union u_v2 i;
 	union u_v2 j;

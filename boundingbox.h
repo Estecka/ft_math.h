@@ -22,16 +22,16 @@ struct	s_bbox {
 	union u_v3	max;
 };
 
-void	bbinit(struct s_bbox *this, t_v3 point);
-void	bbpoint(struct s_bbox *this, t_v3 point);
+void	bbinit(t_bbox *this, const t_v3 point);
+void	bbpoint(t_bbox *this, const t_v3 point);
 
-void	bbtri(struct s_bbox *this, t_tri triangle);
-void	bbquad(struct s_bbox *this, t_quad quadrilater);
+void	bbtri(t_bbox *this, t_tri triangle);
+void	bbquad(t_bbox *this, t_quad quadrilater);
 
-short	bbcontain(struct s_bbox *this, t_v3 point);
-short	bbinter(struct s_bbox *box1, struct s_bbox *box2);
-void	bbclip(struct s_bbox *this, struct s_bbox *box1, struct s_bbox *box2);
+short	bbcontain(t_bbox *this, const t_v3 point);
+short	bbinter(const t_bbox *box1, const t_bbox *box2);
+void	bbclip(t_bbox *this, const t_bbox *box1, const t_bbox *box2);
 
-short	bbisvalid(struct s_bbox *this);
+short	bbisvalid(t_bbox *this);
 
 #endif

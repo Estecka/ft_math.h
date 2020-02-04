@@ -45,7 +45,7 @@ union	u_quad
 	struct s_quad	points;
 };
 
-short	tricontain(t_v2 point, t_tri triangle);
-short	quadcontain(t_v2 point, t_quad quadrilater);
+short	tricontain(const t_v2 point, const t_tri triangle);
+short	quadcontain(const t_v2 point, const t_quad quadrilater);
 
 #endif

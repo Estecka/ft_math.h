@@ -20,19 +20,19 @@
 ** @return float The magnitude of their cross-product.
 */
 
-extern float		crossp2(t_v2 i, t_v2 j)
+extern float		crossp2(const t_v2 i, const t_v2 j)
 {
 	return ((i[0] * j[1]) - (i[1] * j[0]));
 }
 
 /*
 ** Computes the cross-product of two 3D vectors.
-** @param t_v3 i The first vector.
-** @param t_v3 j The second vector.
+** @param const t_v3 i The first vector.
+** @param const t_v3 j The second vector.
 ** @return struct s_v3 Their cross-product
 */
 
-extern union u_v3	crossp3(t_v3 i, t_v3 j)
+extern union u_v3	crossp3(const t_v3 i, const t_v3 j)
 {
 	return ((union u_v3){
 		.vec3 = {

@@ -17,10 +17,10 @@
 /*
 ** Initializes a bounding box with a point.
 ** @param t_bbox* this The bounding box to initialize.
-** @param t_v3 point The point to use as initializer.
+** @param const t_v3 point The point to use as initializer.
 */
 
-extern void		bbinit(t_bbox *this, t_v3 point)
+extern void		bbinit(t_bbox *this, const t_v3 point)
 {
 	this->min = *(union u_v3*)point;
 	this->max = *(union u_v3*)point;
@@ -29,10 +29,10 @@ extern void		bbinit(t_bbox *this, t_v3 point)
 /*
 ** Expands a bounding box to include a given point.
 ** @param t_bbox* this The bounding box to recompute.
-** @param t_v3 point The point to include.
+** @param const t_v3 point The point to include.
 */
 
-extern void		bbpoint(t_bbox *this, t_v3 point)
+extern void		bbpoint(t_bbox *this, const t_v3 point)
 {
 	if (point[0] < this->min.vec3.x)
 		this->min.vec3.x = point[0];
@@ -78,13 +78,13 @@ extern void		bbquad(t_bbox *this, t_quad quad)
 /*
 ** Checks whether a given point is contained in a bounding box.
 ** @param t_bbox this The containing bounding box.
-** @param t_v3 this The point to check.
+** @param const t_v3 this The point to check.
 ** @param bool
 ** 	true  The point is inside the bounding box.
 ** 	false The point is outside or on the edges of the bounding box.
 */
 
-extern short	bbcontain(t_bbox *this, t_v3 p)
+extern short	bbcontain(t_bbox *this, const t_v3 p)
 {
 	return (
 		this->min.vec3.x < p[0] && p[0] < this->max.vec3.x

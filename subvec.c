@@ -14,12 +14,12 @@
 
 /*
 ** Computes the vector which goes from one point to the other.
-** @param t_v3 fro The source point.
-** @param t_v3 to  The destination point.
+** @param const t_v3 fro The source point.
+** @param const t_v3 to  The destination point.
 ** @return union u_v3 to minus from
 */
 
-extern union u_v3	subvec3(t_v3 fro, t_v3 to)
+extern union u_v3	subvec3(const t_v3 fro, const t_v3 to)
 {
 	return ((union u_v3){
 		.vec3 = {
@@ -32,12 +32,12 @@ extern union u_v3	subvec3(t_v3 fro, t_v3 to)
 
 /*
 ** Computes the vector which goes from one point to the other.
-** @param t_v2 fro The source point.
-** @param t_v2 to  The destination point.
+** @param const t_v2 fro The source point.
+** @param const t_v2 to  The destination point.
 ** @return union u_v2 to minus from
 */
 
-extern union u_v2	subvec2(t_v2 fro, t_v2 to)
+extern union u_v2	subvec2(const t_v2 fro, const t_v2 to)
 {
 	return ((union u_v2){
 		.vec2 = {

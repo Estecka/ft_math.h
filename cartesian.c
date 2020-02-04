@@ -14,11 +14,11 @@
 
 /*
 ** Computes the cartesian coordinates of a homogeneous vector.
-** @param t_v4 v The homegenous vector.
+** @param const t_v4 v The homegenous vector.
 ** @return union u_v3 The cartesian vector.
 */
 
-union u_v3	cartesian(t_v4 v)
+union u_v3	cartesian(const t_v4 v)
 {
 	union u_v3	r;
 	float		w;
@@ -37,8 +37,8 @@ union u_v3	cartesian(t_v4 v)
 
 /*
 ** Computes the homogeneous coordinates of a cartesian vector.
-** @param t_v3 v The cartesian point
-** @param t_mx4 m The projection matrix that was used to obtain the point.
+** @param const t_v3 v The cartesian point
+** @param const t_mx4 m The projection matrix that was used to obtain the point.
 ** 	This is assumed to be a valid perspective matrix :
 ** 	[m00   0 m20 m30]
 ** 	[  0 m11 m21 m31]
@@ -47,7 +47,7 @@ union u_v3	cartesian(t_v4 v)
 ** @return union u_v4 The homogeneous vector.
 */
 
-union u_v4	homegeneous(t_v3 v, t_mx4 m)
+union u_v4	homegeneous(const t_v3 v, const t_mx4 m)
 {
 	union u_v4	r;
 

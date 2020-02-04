@@ -15,12 +15,12 @@
 /*
 ** Multiply a vector by a matrix.
 ** Vectors of lower dimensions are automatically expanded with a 1.
-** @param t_mx m The matrix to multiply
-** @param t_v v The vector to multiply
-** @return t_v The resulting vector.
+** @param const t_mx m The matrix to multiply
+** @param const t_v v The vector to multiply
+** @return const t_v The resulting vector.
 */
 
-union u_v2	mx2v2(t_mx2 m, t_v2 v)
+union u_v2	mx2v2(const t_mx2 m, const t_v2 v)
 {
 	return ((union u_v2){
 		.vec2 = {
@@ -30,7 +30,7 @@ union u_v2	mx2v2(t_mx2 m, t_v2 v)
 	});
 }
 
-union u_v3	mx3v2(t_mx3 m, t_v2 v)
+union u_v3	mx3v2(const t_mx3 m, const t_v2 v)
 {
 	return ((union u_v3){
 		.vec3 = {
@@ -41,7 +41,7 @@ union u_v3	mx3v2(t_mx3 m, t_v2 v)
 	});
 }
 
-union u_v3	mx3v3(t_mx3 m, t_v3 v)
+union u_v3	mx3v3(const t_mx3 m, const t_v3 v)
 {
 	return ((union u_v3){
 		.vec3 = {
@@ -52,7 +52,7 @@ union u_v3	mx3v3(t_mx3 m, t_v3 v)
 	});
 }
 
-union u_v4	mx4v3(t_mx4 m, t_v3 v)
+union u_v4	mx4v3(const t_mx4 m, const t_v3 v)
 {
 	return ((union u_v4){
 		.vec4 = {
@@ -68,7 +68,7 @@ union u_v4	mx4v3(t_mx4 m, t_v3 v)
 	});
 }
 
-union u_v4	mx4v4(t_mx4 m, t_v4 v)
+union u_v4	mx4v4(const t_mx4 m, const t_v4 v)
 {
 	return ((union u_v4){
 		.vec4 = {

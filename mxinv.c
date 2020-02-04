@@ -14,11 +14,11 @@
 
 /*
 ** Computes a 2x2 matrix's inverse.
-** @param t_mx2 m The matrix to inverse.
+** @param const t_mx2 m The matrix to inverse.
 ** @param t_mx2 mi Outputs the inverted matrix.
 */
 
-extern void	mx2inv(t_mx2 m, t_mx2 mi)
+extern void	mx2inv(const t_mx2 m, t_mx2 mi)
 {
 	float d;
 
@@ -31,11 +31,11 @@ extern void	mx2inv(t_mx2 m, t_mx2 mi)
 
 /*
 ** Computes a 3x3 matrix's inverse.
-** @param t_mx3 m The matrix to inverse.
+** @param const t_mx3 m The matrix to inverse.
 ** @param t_mx3 mi Outputs the inverted matrix.
 */
 
-extern void	mx3inv(t_mx3 m, t_mx3 mi)
+extern void	mx3inv(const t_mx3 m, t_mx3 mi)
 {
 	float d;
 

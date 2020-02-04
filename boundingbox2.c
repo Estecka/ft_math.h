@@ -15,13 +15,13 @@
 
 /*
 ** Checks whether two bounding boxes intersect;
-** @param t_bbox* b1, b2 The boxes to intersect.
+** @param const t_bbox* b1, b2 The boxes to intersect.
 ** @return bool
 ** 	true  The boxes do intersect.
 ** 	false The boxes don't intersect, or are on the edge of each other.
 */
 
-extern short	bbinter(t_bbox *b1, t_bbox *b2)
+extern short	bbinter(const t_bbox *b1, const t_bbox *b2)
 {
 	if (b1->min.vec3.x <= b2->min.vec3.x && b1->max.vec3.x <= b2->min.vec3.x)
 		return (0);
@@ -41,10 +41,10 @@ extern short	bbinter(t_bbox *b1, t_bbox *b2)
 /*
 ** Computes the interection of two bounding boxes.
 ** @param t_bbox* this Outputs the resulting bounding box.
-** @param t_bbox* b1,b2 The bounding boxes to intersect.
+** @param const t_bbox* b1,b2 The bounding boxes to intersect.
 */
 
-extern void		bbclip(t_bbox *this, t_bbox *b1, t_bbox *b2)
+extern void		bbclip(t_bbox *this, const t_bbox *b1, const t_bbox *b2)
 {
 	this->min.vec3.x = (b1->min.vec3.x > b2->min.vec3.x) ?
 		b1->min.vec3.x :

@@ -60,12 +60,12 @@ union		u_v4
 	struct s_v2	vec2;
 };
 
-union u_v2	addvec2(t_v2 v1, t_v2 v2);
-union u_v3	addvec3(t_v3 v1, t_v3 v2);
-union u_v2	subvec2(t_v2 fro, t_v2 to);
-union u_v3	subvec3(t_v3 fro, t_v3 to);
+union u_v2	addvec2(const t_v2 v1, const t_v2 v2);
+union u_v3	addvec3(const t_v3 v1, const t_v3 v2);
+union u_v2	subvec2(const t_v2 fro, const t_v2 to);
+union u_v3	subvec3(const t_v3 fro, const t_v3 to);
 
-float		crossp2(t_v2 i, t_v2 j);
-union u_v3	crossp3(t_v3 i, t_v3 j);
+float		crossp2(const t_v2 i, const t_v2 j);
+union u_v3	crossp3(const t_v3 i, const t_v3 j);
 
 #endif

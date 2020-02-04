@@ -18,7 +18,7 @@
 ** @return union u_v3 the sum of the vectors.
 */
 
-extern union u_v2	addvec2(t_v2 v1, t_v2 v2)
+extern union u_v2	addvec2(const t_v2 v1, const t_v2 v2)
 {
 	return ((union u_v2){
 		.vec2 = {
@@ -28,7 +28,7 @@ extern union u_v2	addvec2(t_v2 v1, t_v2 v2)
 	});
 }
 
-extern union u_v3	addvec3(t_v3 v1, t_v3 v2)
+extern union u_v3	addvec3(const t_v3 v1, const t_v3 v2)
 {
 	return ((union u_v3){
 		.vec3 = {
