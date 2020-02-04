@@ -20,6 +20,10 @@ typedef float		t_mx4[4][4];
 typedef float		t_mx3[3][3];
 typedef float		t_mx2[2][2];
 
+void 		mx2init(t_mx2 matrix);
+void 		mx3init(t_mx3 matrix);
+void 		mx4init(t_mx4 matrix);
+
 void		mxtrans(t_mx matrix, t_mx destination, unsigned int rank);
 
 void		mx3adj(t_mx3 matrix, t_mx3 destination);

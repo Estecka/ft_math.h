@@ -1,5 +1,5 @@
 SRCS = \
-	mxdet.c mxtrans.c mxadj.c mxinv.c mxm.c mxv.c \
+	mxinit.c mxdet.c mxtrans.c mxadj.c mxinv.c mxm.c mxv.c \
 	addvec.c subvec.c crossp.c cartesian.c \
 	floatminmax.c \
 	figcontain.c \
