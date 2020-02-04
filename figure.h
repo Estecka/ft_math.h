@@ -45,7 +45,12 @@ union	u_quad
 	struct s_quad	points;
 };
 
-short	tricontain(const t_v2 point, const t_tri triangle);
-short	quadcontain(const t_v2 point, const t_quad quadrilater);
+union u_v4	planeeq(const t_v3 normale, const t_v3 point);
+float		planex(const t_v4 equation, const t_v3 point);
+float		planey(const t_v4 equation, const t_v3 point);
+float		planez(const t_v4 equation, const t_v3 point);
+
+short		tricontain(const t_v2 point, const t_tri triangle);
+short		quadcontain(const t_v2 point, const t_quad quadrilater);
 
 #endif
