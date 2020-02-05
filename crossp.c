@@ -42,3 +42,19 @@ extern union u_v3	crossp3(const t_v3 i, const t_v3 j)
 		}
 	});
 }
+
+/*
+** Computes the normale of a figure.
+** @param const t_v3 figure. May be a t_quad or t_tri.
+** @return union u_v3 The normale.
+*/
+
+extern union u_v3	normale(const t_v3 *figure)
+{
+	union u_v3 i;
+	union u_v3 j;
+
+	i = subvec3(figure[1], figure[2]);
+	j = subvec3(figure[1], figure[0]);
+	return (crossp3(i.array, j.array));
+}
