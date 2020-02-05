@@ -13,9 +13,9 @@
 #include "ft_math.h"
 
 /*
-** Computes a projection matrix after the dimensions of the near and farplanes.
-** @param t_mx matrix The matrix to initialize.
-** @param const t_bbox box The dimension of the planes.
+** Computes a projection matrix after the dimensions of the frustrum.
+** @param t_mx this The matrix to initialize.
+** @param const t_bbox box The dimension of the frustrum.
 ** 	box.min.x Left
 ** 	box.min.y Bottom
 ** 	box.min.z Near
@@ -24,7 +24,7 @@
 ** 	box.max.x Far
 */
 
-extern void	mxprojbb(t_mx4 this, t_bbox *box)
+extern void	mxfrust(t_mx4 this, const t_bbox *box)
 {
 	float iwidth;
 	float iheight;
