@@ -22,13 +22,13 @@ struct	s_bbox {
 	union u_v3	max;
 };
 
-void	bbinit(t_bbox *this, const t_v3 point);
-void	bbpoint(t_bbox *this, const t_v3 point);
+void	bbinit(t_bbox *this, const t_v3 *point);
+void	bbpoint(t_bbox *this, const t_v3 *point);
 
 void	bbtri(t_bbox *this, t_tri triangle);
 void	bbquad(t_bbox *this, t_quad quadrilater);
 
-short	bbcontain(t_bbox *this, const t_v3 point);
+short	bbcontain(t_bbox *this, const t_v3 *point);
 short	bbinter(const t_bbox *box1, const t_bbox *box2);
 void	bbclip(t_bbox *this, const t_bbox *box1, const t_bbox *box2);
 

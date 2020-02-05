@@ -14,38 +14,38 @@
 
 /*
 ** Computes the equation of a plane.
-** @param const t_v3 n The normale of the plane.
-** @param const t_v3 p Any point on the plane.
+** @param const t_v3 *n The normale of the plane.
+** @param const t_v3 *p Any point on the plane.
 */
 
-extern union u_v4	planeeq(const t_v3 n, const t_v3 p)
+extern union u_v4	planeeq(const t_v3 *n, const t_v3 *p)
 {
 	union u_v4 eq;
 
-	eq.vec4.x = n[0];
-	eq.vec4.y = n[1];
-	eq.vec4.z = n[2];
-	eq.vec4.w = (n[0] * p[0]) + (n[1] * p[1]) + (n[2] * p[2]);
+	eq.vec4.x = n->x;
+	eq.vec4.y = n->y;
+	eq.vec4.z = n->z;
+	eq.vec4.w = (n->x * p->x) + (n->y * p->y) + (n->z * p->z);
 	return (eq);
 }
 
 /*
 ** Computes the missing coordinate of a point on the plane.
-** @param const t_v4 eq The plane's equation.
-** @param const t_v3 p The point to complete.
+** @param const t_v4 *eq The plane's equation.
+** @param const t_v3 *p The point to complete.
 */
 
-extern float		planex(const t_v4 eq, const t_v3 p)
+extern float		planex(const t_v4 *eq, const t_v3 *p)
 {
-	return ((eq[4] - (eq[1] * p[1]) - (eq[2] * p[2])) / eq[0]);
+	return ((eq->w - (eq->y * p->y) - (eq->z * p->z)) / eq->x);
 }
 
-extern float		planey(const t_v4 eq, const t_v3 p)
+extern float		planey(const t_v4 *eq, const t_v3 *p)
 {
-	return (eq[4] - (eq[0] * p[0]) - (eq[2] * p[2])) / eq[1];
+	return (eq->w - (eq->x * p->x) - (eq->z * p->z)) / eq->y;
 }
 
-extern float		planez(const t_v4 eq, const t_v3 p)
+extern float		planez(const t_v4 *eq, const t_v3 *p)
 {
-	return (eq[4] - (eq[0] * p[0]) - (eq[1] * p[1])) / eq[2];
+	return (eq->w - (eq->x * p->x) - (eq->y * p->y)) / eq->z;
 }

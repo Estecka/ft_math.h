@@ -15,30 +15,30 @@
 /*
 ** Computes the magnitude of the cross product of two 2D vectors.
 ** This is faster than computing the full cross-product.
-** @param t_v2 i The first vector.
-** @param t_v2 j The second vector.
+** @param const t_v2 *i The first vector.
+** @param const t_v2 *j The second vector.
 ** @return float The magnitude of their cross-product.
 */
 
-extern float		crossp2(const t_v2 i, const t_v2 j)
+extern float		crossp2(const t_v2 *i, const t_v2 *j)
 {
-	return ((i[0] * j[1]) - (i[1] * j[0]));
+	return ((i->x * j->y) - (i->y * j->x));
 }
 
 /*
 ** Computes the cross-product of two 3D vectors.
-** @param const t_v3 i The first vector.
-** @param const t_v3 j The second vector.
+** @param const t_v3 *i The first vector.
+** @param const t_v3 *j The second vector.
 ** @return struct s_v3 Their cross-product
 */
 
-extern union u_v3	crossp3(const t_v3 i, const t_v3 j)
+extern union u_v3	crossp3(const t_v3 *i, const t_v3 *j)
 {
 	return ((union u_v3){
 		.vec3 = {
-			.x = (i[1] * j[2]) - (i[2] * j[1]),
-			.y = (i[2] * j[0]) - (i[0] * j[2]),
-			.z = (i[0] * j[1]) - (i[1] * j[0]),
+			.x = (i->y * j->z) - (i->z * j->y),
+			.y = (i->z * j->x) - (i->x * j->z),
+			.z = (i->x * j->y) - (i->y * j->x),
 		}
 	});
 }
@@ -54,7 +54,7 @@ extern union u_v3	normale(const t_v3 *figure)
 	union u_v3 i;
 	union u_v3 j;
 
-	i = subvec3(figure[1], figure[2]);
-	j = subvec3(figure[1], figure[0]);
-	return (crossp3(i.array, j.array));
+	i = subvec3(&figure[1], &figure[2]);
+	j = subvec3(&figure[1], &figure[0]);
+	return (crossp3(&i.vec3, &j.vec3));
 }

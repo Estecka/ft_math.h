@@ -14,35 +14,35 @@
 
 /*
 ** Computes the vector which goes from one point to the other.
-** @param const t_v3 fro The source point.
-** @param const t_v3 to  The destination point.
+** @param const t_v3 *fro The source point.
+** @param const t_v3 *to  The destination point.
 ** @return union u_v3 to minus from
 */
 
-extern union u_v3	subvec3(const t_v3 fro, const t_v3 to)
+extern union u_v3	subvec3(const t_v3 *fro, const t_v3 *to)
 {
 	return ((union u_v3){
 		.vec3 = {
-			.x = to[0] - fro[0],
-			.y = to[1] - fro[1],
-			.z = to[2] - fro[2],
+			.x = to->x - fro->x,
+			.y = to->y - fro->y,
+			.z = to->z - fro->z,
 		}
 	});
 }
 
 /*
 ** Computes the vector which goes from one point to the other.
-** @param const t_v2 fro The source point.
-** @param const t_v2 to  The destination point.
+** @param const t_v2 *fro The source point.
+** @param const t_v2 *to  The destination point.
 ** @return union u_v2 to minus from
 */
 
-extern union u_v2	subvec2(const t_v2 fro, const t_v2 to)
+extern union u_v2	subvec2(const t_v2 *fro, const t_v2 *to)
 {
 	return ((union u_v2){
 		.vec2 = {
-			.x = to[0] - fro[0],
-			.y = to[1] - fro[1],
+			.x = to->x - fro->x,
+			.y = to->y - fro->y,
 		}
 	});
 }

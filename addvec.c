@@ -18,23 +18,23 @@
 ** @return union u_v3 the sum of the vectors.
 */
 
-extern union u_v2	addvec2(const t_v2 v1, const t_v2 v2)
+extern union u_v2	addvec2(const t_v2 *v1, const t_v2 *v2)
 {
 	return ((union u_v2){
 		.vec2 = {
-			.x = v2[0] + v1[0],
-			.y = v2[1] + v1[1],
+			.x = v2->x + v1->x,
+			.y = v2->y + v1->y,
 		}
 	});
 }
 
-extern union u_v3	addvec3(const t_v3 v1, const t_v3 v2)
+extern union u_v3	addvec3(const t_v3 *v1, const t_v3 *v2)
 {
 	return ((union u_v3){
 		.vec3 = {
-			.x = v2[0] + v1[0],
-			.y = v2[1] + v1[1],
-			.z = v2[2] + v1[2],
+			.x = v2->x + v1->x,
+			.y = v2->y + v1->y,
+			.z = v2->z + v1->z,
 		}
 	});
 }

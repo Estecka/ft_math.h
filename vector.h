@@ -14,16 +14,15 @@
 # define VECTOR_H
 
 typedef float	*t_v;
-typedef float	t_v2[2];
-typedef float	t_v3[3];
-typedef float	t_v4[4];
 
+typedef struct s_v2	t_v2;
 struct		s_v2
 {
 	float	x;
 	float	y;
 };
 
+typedef struct s_v3	t_v3;
 struct		s_v3
 {
 	float	x;
@@ -31,6 +30,7 @@ struct		s_v3
 	float	z;
 };
 
+typedef struct s_v4	t_v4;
 struct		s_v4
 {
 	float	x;
@@ -41,31 +41,31 @@ struct		s_v4
 
 union		u_v2
 {
-	t_v2		array;
+	float		array[2];
 	struct s_v2	vec2;
 };
 
 union		u_v3
 {
-	t_v3		array;
+	float		array[3];
 	struct s_v3	vec3;
 	struct s_v2	vec2;
 };
 
 union		u_v4
 {
-	t_v4		array;
+	float		array[4];
 	struct s_v4	vec4;
 	struct s_v3	vec3;
 	struct s_v2	vec2;
 };
 
-union u_v2	addvec2(const t_v2 v1, const t_v2 v2);
-union u_v3	addvec3(const t_v3 v1, const t_v3 v2);
-union u_v2	subvec2(const t_v2 fro, const t_v2 to);
-union u_v3	subvec3(const t_v3 fro, const t_v3 to);
+union u_v2	addvec2(const t_v2 *v1, const t_v2 *v2);
+union u_v3	addvec3(const t_v3 *v1, const t_v3 *v2);
+union u_v2	subvec2(const t_v2 *fro, const t_v2 *to);
+union u_v3	subvec3(const t_v3 *fro, const t_v3 *to);
 
-float		crossp2(const t_v2 i, const t_v2 j);
-union u_v3	crossp3(const t_v3 i, const t_v3 j);
+float		crossp2(const t_v2 *i, const t_v2 *j);
+union u_v3	crossp3(const t_v3 *i, const t_v3 *j);
 
 #endif
