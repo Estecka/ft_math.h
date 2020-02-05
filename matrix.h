@@ -13,6 +13,7 @@
 #ifndef MATRIX_H
 # define MATRIX_H
 
+# include "boundingbox.h"
 # include "vector.h"
 
 typedef float*const	*t_mx;
@@ -23,6 +24,8 @@ typedef float		t_mx2[2][2];
 void 		mx2init(t_mx2 matrix);
 void 		mx3init(t_mx3 matrix);
 void 		mx4init(t_mx4 matrix);
+
+void		mxprojbb(t_mx4 this, t_bbox *box);
 
 void		mxtrans(const t_mx matrix, t_mx destination, unsigned int rank);
 
