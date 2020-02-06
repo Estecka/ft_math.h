@@ -27,7 +27,7 @@ void 		mx4init(t_mx4 matrix);
 
 void		mxfrust(t_mx4 out, const t_bbox *frustrum);
 
-void		mxtrans(const t_mx matrix, t_mx destination, unsigned int rank);
+void		mx4trans(const t_mx4 matrix, t_mx4 destination);
 
 void		mx3adj(const t_mx3 matrix, t_mx3 destination);
 void		mx3adjt(const t_mx3 transposed, t_mx3 destination);

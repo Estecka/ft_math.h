@@ -20,17 +20,17 @@
 ** @param int n The size of the matrix.
 */
 
-extern void	mxtrans(const t_mx m, t_mx mt, unsigned int n)
+extern void	mx4trans(const t_mx4 m, t_mx4 mt)
 {
 	unsigned int	x;
 	unsigned int	y;
 	float			f;
 
 	y = 0;
-	while (y < n)
+	while (y < 4)
 	{
 		x = y;
-		while (x < n)
+		while (x < 4)
 		{
 			f = m[x][y];
 			mt[x][y] = m[y][x];
