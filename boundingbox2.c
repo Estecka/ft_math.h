@@ -23,17 +23,17 @@
 
 extern short	bbinter(const t_bbox *b1, const t_bbox *b2)
 {
-	if (b1->min.vec3.x <= b2->min.vec3.x && b1->max.vec3.x <= b2->min.vec3.x)
+	if (b1->min.x <= b2->min.x && b1->max.x <= b2->min.x)
 		return (0);
-	if (b1->min.vec3.x >= b2->max.vec3.x && b1->max.vec3.x >= b2->max.vec3.x)
+	if (b1->min.x >= b2->max.x && b1->max.x >= b2->max.x)
 		return (0);
-	if (b1->min.vec3.y <= b2->min.vec3.y && b1->max.vec3.y <= b2->min.vec3.y)
+	if (b1->min.y <= b2->min.y && b1->max.y <= b2->min.y)
 		return (0);
-	if (b1->min.vec3.y >= b2->max.vec3.y && b1->max.vec3.y >= b2->max.vec3.y)
+	if (b1->min.y >= b2->max.y && b1->max.y >= b2->max.y)
 		return (0);
-	if (b1->min.vec3.z <= b2->min.vec3.z && b1->max.vec3.z <= b2->min.vec3.z)
+	if (b1->min.z <= b2->min.z && b1->max.z <= b2->min.z)
 		return (0);
-	if (b1->min.vec3.z >= b2->max.vec3.z && b1->max.vec3.z >= b2->max.vec3.z)
+	if (b1->min.z >= b2->max.z && b1->max.z >= b2->max.z)
 		return (0);
 	return (1);
 }
@@ -46,24 +46,24 @@ extern short	bbinter(const t_bbox *b1, const t_bbox *b2)
 
 extern void		bbclip(t_bbox *this, const t_bbox *b1, const t_bbox *b2)
 {
-	this->min.vec3.x = (b1->min.vec3.x > b2->min.vec3.x) ?
-		b1->min.vec3.x :
-		b2->min.vec3.x;
-	this->min.vec3.y = (b1->min.vec3.y > b2->min.vec3.y) ?
-		b1->min.vec3.y :
-		b2->min.vec3.y;
-	this->min.vec3.z = (b1->min.vec3.z > b2->min.vec3.z) ?
-		b1->min.vec3.z :
-		b2->min.vec3.z;
-	this->max.vec3.x = (b1->max.vec3.x < b2->max.vec3.x) ?
-		b1->max.vec3.x :
-		b2->max.vec3.x;
-	this->max.vec3.y = (b1->max.vec3.y < b2->max.vec3.y) ?
-		b1->max.vec3.y :
-		b2->max.vec3.y;
-	this->max.vec3.z = (b1->max.vec3.z < b2->max.vec3.z) ?
-		b1->max.vec3.z :
-		b2->max.vec3.z;
+	this->min.x = (b1->min.x > b2->min.x) ?
+		b1->min.x :
+		b2->min.x;
+	this->min.y = (b1->min.y > b2->min.y) ?
+		b1->min.y :
+		b2->min.y;
+	this->min.z = (b1->min.z > b2->min.z) ?
+		b1->min.z :
+		b2->min.z;
+	this->max.x = (b1->max.x < b2->max.x) ?
+		b1->max.x :
+		b2->max.x;
+	this->max.y = (b1->max.y < b2->max.y) ?
+		b1->max.y :
+		b2->max.y;
+	this->max.z = (b1->max.z < b2->max.z) ?
+		b1->max.z :
+		b2->max.z;
 }
 
 /*
@@ -77,8 +77,8 @@ extern void		bbclip(t_bbox *this, const t_bbox *b1, const t_bbox *b2)
 extern short	bbisvalid(struct s_bbox *this)
 {
 	return (
-		this->max.vec3.x > this->min.vec3.x
-		&& this->max.vec3.y > this->min.vec3.y
-		&& this->max.vec3.z > this->min.vec3.z
+		this->max.x > this->min.x
+		&& this->max.y > this->min.y
+		&& this->max.z > this->min.z
 );
 }

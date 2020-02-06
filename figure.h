@@ -15,22 +15,22 @@
 
 # include "vector.h"
 
-typedef union u_v3	t_tri[3];
-typedef union u_v3	t_quad[4];
+typedef struct s_v3	t_tri[3];
+typedef struct s_v3	t_quad[4];
 
 struct	s_tri
 {
-	union u_v3	a;
-	union u_v3	b;
-	union u_v3	c;
+	struct s_v3	a;
+	struct s_v3	b;
+	struct s_v3	c;
 };
 
 struct	s_quad
 {
-	union u_v3	a;
-	union u_v3	b;
-	union u_v3	c;
-	union u_v3	d;
+	struct s_v3	a;
+	struct s_v3	b;
+	struct s_v3	c;
+	struct s_v3	d;
 };
 
 union	u_tri

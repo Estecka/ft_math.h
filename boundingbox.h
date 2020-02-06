@@ -18,8 +18,8 @@
 
 typedef struct s_bbox	t_bbox;
 struct	s_bbox {
-	union u_v3	min;
-	union u_v3	max;
+	struct s_v3	min;
+	struct s_v3	max;
 };
 
 void	bbinit(t_bbox *this, const t_v3 *point);

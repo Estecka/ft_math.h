@@ -28,16 +28,16 @@ extern short	tricontain(const t_v2 *p, const t_tri tri)
 	union u_v2 i;
 	union u_v2 j;
 
-	i = subvec2(&tri[0].vec2, &tri[1].vec2);
-	j = subvec2(&tri[0].vec2, p);
+	i = subvec2((t_v2*)&tri[0], (t_v2*)&tri[1]);
+	j = subvec2((t_v2*)&tri[0], p);
 	if (crossp2(&i.vec2, &j.vec2) <= 0)
 		return (0);
-	i = subvec2(&tri[1].vec2, &tri[2].vec2);
-	j = subvec2(&tri[1].vec2, p);
+	i = subvec2((t_v2*)&tri[1], (t_v2*)&tri[2]);
+	j = subvec2((t_v2*)&tri[1], p);
 	if (crossp2(&i.vec2, &j.vec2) <= 0)
 		return (0);
-	i = subvec2(&tri[2].vec2, &tri[0].vec2);
-	j = subvec2(&tri[2].vec2, p);
+	i = subvec2((t_v2*)&tri[2], (t_v2*)&tri[0]);
+	j = subvec2((t_v2*)&tri[2], p);
 	if (crossp2(&i.vec2, &j.vec2) <= 0)
 		return (0);
 	return (1);
@@ -57,20 +57,20 @@ extern short	quadcontain(const t_v2 *p, const t_quad quad)
 	union u_v2 i;
 	union u_v2 j;
 
-	i = subvec2(&quad[0].vec2, &quad[1].vec2);
-	j = subvec2(&quad[0].vec2, p);
+	i = subvec2((t_v2*)&quad[0], (t_v2*)&quad[1]);
+	j = subvec2((t_v2*)&quad[0], p);
 	if (crossp2(&i.vec2, &j.vec2) <= 0)
 		return (0);
-	i = subvec2(&quad[1].vec2, &quad[2].vec2);
-	j = subvec2(&quad[1].vec2, p);
+	i = subvec2((t_v2*)&quad[1], (t_v2*)&quad[2]);
+	j = subvec2((t_v2*)&quad[1], p);
 	if (crossp2(&i.vec2, &j.vec2) <= 0)
 		return (0);
-	i = subvec2(&quad[2].vec2, &quad[3].vec2);
-	j = subvec2(&quad[2].vec2, p);
+	i = subvec2((t_v2*)&quad[2], (t_v2*)&quad[3]);
+	j = subvec2((t_v2*)&quad[2], p);
 	if (crossp2(&i.vec2, &j.vec2) <= 0)
 		return (0);
-	i = subvec2(&quad[3].vec2, &quad[0].vec2);
-	j = subvec2(&quad[3].vec2, p);
+	i = subvec2((t_v2*)&quad[3], (t_v2*)&quad[0]);
+	j = subvec2((t_v2*)&quad[3], p);
 	if (crossp2(&i.vec2, &j.vec2) <= 0)
 		return (0);
 	return (1);

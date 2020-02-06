@@ -30,16 +30,16 @@ extern void	mxfrust(t_mx4 this, const t_bbox *box)
 	float iheight;
 	float idepth;
 
-	iwidth = 1 / (box->max.vec3.x - box->min.vec3.x);
-	iheight = 1 / (box->max.vec3.y - box->min.vec3.y);
-	idepth = 1 / (box->max.vec3.z - box->min.vec3.z);
+	iwidth = 1 / (box->max.x - box->min.x);
+	iheight = 1 / (box->max.y - box->min.y);
+	idepth = 1 / (box->max.z - box->min.z);
 	mx4init(this);
-	this[0][0] = 2 * box->min.vec3.z * iwidth;
-	this[0][2] = (box->min.vec3.x + box->max.vec3.x) * iwidth;
-	this[1][1] = 2 * box->min.vec3.z * iheight;
-	this[2][1] = (box->min.vec3.y + box->max.vec3.y) * iheight;
-	this[2][2] = -(box->min.vec3.z + box->max.vec3.z) * idepth;
-	this[3][2] = -2 * box->min.vec3.z * box->max.vec3.z * idepth;
+	this[0][0] = 2 * box->min.z * iwidth;
+	this[0][2] = (box->min.x + box->max.x) * iwidth;
+	this[1][1] = 2 * box->min.z * iheight;
+	this[2][1] = (box->min.y + box->max.y) * iheight;
+	this[2][2] = -(box->min.z + box->max.z) * idepth;
+	this[3][2] = -2 * box->min.z * box->max.z * idepth;
 	this[3][3] = 0;
 	this[2][3] = -1;
 }
