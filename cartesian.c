@@ -51,7 +51,7 @@ union u_v4	homegeneous(const t_v3 *v, const t_mx4 m)
 {
 	union u_v4	r;
 
-	r.vec4.w = -m[3][2] * ((m[2][2] * m[2][3]) - v->z);
+	r.vec4.w = -m[3][2] * m[2][3] / (m[2][2] - (m[2][3] * v->z));
 	r.vec4.x = v->x * r.vec4.w;
 	r.vec4.y = v->y * r.vec4.w;
 	r.vec4.z = v->z * r.vec4.w;
