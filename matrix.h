@@ -25,6 +25,10 @@ void 		mx2init(t_mx2 matrix);
 void 		mx3init(t_mx3 matrix);
 void 		mx4init(t_mx4 matrix);
 
+void		mx4eulerx(t_mx4 destination, float angle);
+void		mx4eulery(t_mx4 destination, float angle);
+void		mx4eulerz(t_mx4 destination, float angle);
+
 void		mxfrust(t_mx4 out, const t_bbox *frustrum);
 
 void		mx4trans(const t_mx4 matrix, t_mx4 destination);
