@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:26:22 by abaur             #+#    #+#             */
-/*   Updated: 2020/02/03 11:35:03 by abaur            ###   ########.fr       */
+/*   Updated: 2020/02/07 14:52:46 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ typedef float		t_mx2[2][2];
 void 		mx2init(t_mx2 matrix);
 void 		mx3init(t_mx3 matrix);
 void 		mx4init(t_mx4 matrix);
+
+void		mx2cpy(const t_mx2 source, t_mx2 destination);
+void		mx3cpy(const t_mx3 source, t_mx3 destination);
+void		mx4cpy(const t_mx4 source, t_mx4 destination);
 
 void		mxfrust(t_mx4 out, const t_bbox *frustrum);
 
