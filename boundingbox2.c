@@ -70,16 +70,16 @@ extern void		bbclip(t_bbox *this, const t_bbox *b1, const t_bbox *b2)
 ** Checks whether the given bounding box can contain any point.
 ** @param t_bbox* this The bounding box to check.
 ** @return bool
-** 	true  The bounding box ranges are strictly positive.
-**  false The bounding box is singular, or has at least one negative range.
+** 	true  The bounding box ranges are null or positive.
+**  false The bounding box has at least one negative range.
 */
 
 extern short	bbisvalid(struct s_bbox *this)
 {
 	return (
-		this->max.x > this->min.x
-		&& this->max.y > this->min.y
-		&& this->max.z > this->min.z
+		this->max.x >= this->min.x
+		&& this->max.y >= this->min.y
+		&& this->max.z >= this->min.z
 );
 }
 
@@ -88,14 +88,14 @@ extern short	bbisvalid(struct s_bbox *this)
 ** Only checks in 2D space.
 ** @param t_bbox* this The bounding box to check.
 ** @return bool
-** 	true  The bounding box ranges are strictly positive.
-**  false The bounding box is singular, or has at least one negative range.
+** 	true  The bounding box ranges are null or positive.
+**  false The bounding box has at least one negative range.
 */
 
 extern short	bbisvalid2d(struct s_bbox *this)
 {
 	return (
-		this->max.x > this->min.x
-		&& this->max.y > this->min.y
+		this->max.x >= this->min.x
+		&& this->max.y >= this->min.y
 );
 }
