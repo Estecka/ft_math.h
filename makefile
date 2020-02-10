@@ -2,7 +2,8 @@ SRCS = \
 	mxinit.c mxcpy.c \
 	mxdet.c mxtrans.c mxadj.c mxinv.c mxm.c mxv.c \
 	mxproj.c \
-	addvec.c subvec.c crossp.c cartesian.c \
+	addvec.c subvec.c cartesian.c \
+	dotprod.c crossp.c \
 	floatminmax.c \
 	figcontain.c \
 	plane.c \
