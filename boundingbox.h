@@ -33,5 +33,6 @@ short	bbinter(const t_bbox *box1, const t_bbox *box2);
 void	bbclip(t_bbox *this, const t_bbox *box1, const t_bbox *box2);
 
 short	bbisvalid(t_bbox *this);
+short	bbisvalid2d(t_bbox *this);
 
 #endif
