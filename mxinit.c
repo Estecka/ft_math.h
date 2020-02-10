@@ -17,7 +17,7 @@
 ** @param t_mx matrix The matrix to initialize.
 */
 
-extern void mx2init(t_mx2 m)
+extern void	mx2init(t_mx2 m)
 {
 	m[0][0] = 1;
 	m[0][1] = 0;
@@ -37,6 +37,7 @@ extern void	mx3init(t_mx3 m)
 	m[2][1] = 0;
 	m[2][2] = 1;
 }
+
 extern void	mx4init(t_mx4 m)
 {
 	m[0][0] = 1;

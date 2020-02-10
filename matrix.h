@@ -21,9 +21,9 @@ typedef float		t_mx4[4][4];
 typedef float		t_mx3[3][3];
 typedef float		t_mx2[2][2];
 
-void 		mx2init(t_mx2 matrix);
-void 		mx3init(t_mx3 matrix);
-void 		mx4init(t_mx4 matrix);
+void		mx2init(t_mx2 matrix);
+void		mx3init(t_mx3 matrix);
+void		mx4init(t_mx4 matrix);
 
 void		mx2cpy(const t_mx2 source, t_mx2 destination);
 void		mx3cpy(const t_mx3 source, t_mx3 destination);

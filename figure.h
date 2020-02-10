@@ -18,14 +18,14 @@
 typedef struct s_v3	t_tri[3];
 typedef struct s_v3	t_quad[4];
 
-struct	s_tri
+struct		s_tri
 {
 	struct s_v3	a;
 	struct s_v3	b;
 	struct s_v3	c;
 };
 
-struct	s_quad
+struct		s_quad
 {
 	struct s_v3	a;
 	struct s_v3	b;
@@ -33,13 +33,13 @@ struct	s_quad
 	struct s_v3	d;
 };
 
-union	u_tri
+union		u_tri
 {
 	t_tri			array;
 	struct s_tri	points;
 };
 
-union	u_quad
+union		u_quad
 {
 	t_quad			array;
 	struct s_quad	points;

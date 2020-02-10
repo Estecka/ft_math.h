@@ -14,7 +14,7 @@
 
 /*
 ** Computes the sum of two vectors.
-** @param t_v* this The output vector. 
+** @param t_v* this The output vector.
 ** @param t_v* v1, v2 The vectors to add together.
 */
 
