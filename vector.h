@@ -66,6 +66,8 @@ void		subvec2(t_v2 *destination, const t_v2 *fro, const t_v2 *to);
 void		subvec3(t_v3 *destination, const t_v3 *fro, const t_v3 *to);
 void		scalevec2(t_v2 *destination, const t_v2 *source, float scalar);
 void		scalevec3(t_v3 *destination, const t_v3 *source, float scalar);
+void		scaledot2(t_v2 *destination, const t_v2 *v1, const t_v2 *v2);
+void		scaledot3(t_v3 *destination, const t_v3 *v1, const t_v3 *v2);
 
 float		dotprod2(const t_v2 *i, const t_v2 *j);
 float		dotprod3(const t_v3 *i, const t_v3 *j);
