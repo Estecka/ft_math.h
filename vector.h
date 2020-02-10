@@ -60,10 +60,10 @@ union		u_v4
 	struct s_v2	vec2;
 };
 
-union u_v2	addvec2(const t_v2 *v1, const t_v2 *v2);
-union u_v3	addvec3(const t_v3 *v1, const t_v3 *v2);
-union u_v2	subvec2(const t_v2 *fro, const t_v2 *to);
-union u_v3	subvec3(const t_v3 *fro, const t_v3 *to);
+void		addvec2(t_v2 *destination, const t_v2 *v1, const t_v2 *v2);
+void		addvec3(t_v3 *destination, const t_v3 *v1, const t_v3 *v2);
+void		subvec2(t_v2 *destination, const t_v2 *fro, const t_v2 *to);
+void		subvec3(t_v3 *destination, const t_v3 *fro, const t_v3 *to);
 
 float		crossp2(const t_v2 *i, const t_v2 *j);
 union u_v3	crossp3(const t_v3 *i, const t_v3 *j);
