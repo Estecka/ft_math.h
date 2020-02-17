@@ -29,10 +29,11 @@ void		mx2cpy(const t_mx2 source, t_mx2 destination);
 void		mx3cpy(const t_mx3 source, t_mx3 destination);
 void		mx4cpy(const t_mx4 source, t_mx4 destination);
 
-void		mx4eulerx(t_mx4 destination, float angle);
-void		mx4eulery(t_mx4 destination, float angle);
-void		mx4eulerz(t_mx4 destination, float angle);
-void		mx4euler(t_mx4 destination, const t_v3 *angles);
+void		mx4eulerx(t_mx4 this, float angle);
+void		mx4eulery(t_mx4 this, float angle);
+void		mx4eulerz(t_mx4 this, float angle);
+void		mx4euler(t_mx4 this, const t_v3 *angles);
+void		mx4pos(t_mx4 this, const t_v3 *position);
 
 void		mxfrust(t_mx4 out, const t_bbox *frustrum);
 

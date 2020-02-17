@@ -101,3 +101,17 @@ extern void mx4euler(t_mx4 this, const t_v3 *a)
 	this[2][1] = 0;
 	this[2][2] = (c.y * c.x) - (s.y * s.x);
 }
+
+/*
+** Sets the translation portion of a 4x4 matrix.
+** The rest of the matrix is left unchanged.
+** @param t_mx4* this	The matrix to alter.
+** @param t_v3*	pos	The new translation to be represented.
+*/
+
+extern void	mx4pos(t_mx4 this, const t_v3 *pos)
+{
+	this[3][0] = pos->x;
+	this[3][1] = pos->y;
+	this[3][2] = pos->z;
+}
