@@ -14,6 +14,7 @@
 # define FIGURE_H
 
 # include "vector.h"
+# include "matrix.h"
 
 typedef struct s_v3	t_tri[3];
 typedef struct s_v3	t_quad[4];
@@ -53,5 +54,8 @@ float		planez(const t_v4 *equation, const t_v3 *point);
 short		tricontain(const t_v2 *point, const t_tri triangle);
 short		quadcontain(const t_v2 *point, const t_quad quadrilater);
 union u_v3	normale(const t_v3 *figure);
+
+void		mxquad3(const t_quad source, t_quad destination, t_mx4 matrix);
+void		mxquad4(const t_quad source, t_v4 destination[4], t_mx4 matrix);
 
 #endif
