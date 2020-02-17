@@ -1,7 +1,7 @@
 SRCS = \
 	mxinit.c mxcpy.c \
 	mxdet.c mxtrans.c mxadj.c mxinv.c mxm.c mxv.c \
-	mxproj.c \
+	mxeuler.c mxproj.c \
 	cartesian.c \
 	addvec.c subvec.c scalevec.c \
 	dotprod.c crossp.c \
