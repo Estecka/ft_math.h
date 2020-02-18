@@ -14,7 +14,6 @@
 # define BOUNDINGBOX_H
 
 # include "vector.h"
-# include "figure.h"
 
 typedef struct s_bbox	t_bbox;
 struct	s_bbox {
@@ -24,9 +23,6 @@ struct	s_bbox {
 
 void	bbinit(t_bbox *this, const t_v3 *point);
 void	bbpoint(t_bbox *this, const t_v3 *point);
-
-void	bbtri(t_bbox *this, t_tri triangle);
-void	bbquad(t_bbox *this, t_quad quadrilater);
 
 short	bbcontain(t_bbox *this, const t_v3 *point);
 short	bbinter(const t_bbox *box1, const t_bbox *box2);
