@@ -13,6 +13,8 @@
 #ifndef FT_MATH_H
 # define FT_MATH_H
 
+# define DEG2RAD 0.01745329251994329576923690768489
+
 # include "vector.h"
 # include "matrix.h"
 # include "figure.h"

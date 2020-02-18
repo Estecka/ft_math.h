@@ -61,7 +61,7 @@ extern void	mx4invaff(const t_mx4 m, t_mx4 mi)
 {
 	float d;
 
-	d = 1 / mx3det(m);
+	d = 1 / mx4det3(m);
 	mi[0][0] = ((m[1][1] * m[2][2]) - (m[2][1] * m[1][2])) * d;
 	mi[1][0] = ((m[2][0] * m[1][2]) - (m[1][0] * m[2][2])) * d;
 	mi[2][0] = ((m[1][0] * m[2][1]) - (m[2][0] * m[1][1])) * d;
