@@ -80,7 +80,7 @@ extern void	mx4eulerz(t_mx4 this, float a)
 ** @param const t_v3 *a The rotation angles in radiant.
 */
 
-extern void mx4euler(t_mx4 this, const t_v3 *a)
+extern void	mx4euler(t_mx4 this, const t_v3 *a)
 {
 	struct s_v3 c;
 	struct s_v3 s;
