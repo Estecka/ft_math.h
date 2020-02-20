@@ -14,6 +14,7 @@
 # define FT_MATH_H
 
 # define DEG2RAD 0.01745329251994329576923690768489
+# define RAD2DEG 57.295779513082321
 
 # include "vector.h"
 # include "matrix.h"
