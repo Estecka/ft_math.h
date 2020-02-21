@@ -17,6 +17,7 @@
 # include "boundingbox.h"
 # include "matrix.h"
 
+typedef struct s_v2	t_seg2[2];
 typedef struct s_v3	t_tri[3];
 typedef struct s_v3	t_quad[4];
 
@@ -56,8 +57,9 @@ short		tricontain(const t_v2 *point, const t_tri triangle);
 short		quadcontain(const t_v2 *point, const t_quad quadrilater);
 union u_v3	normale(const t_v3 *figure);
 
-void	bbtri(t_bbox *this, t_tri triangle);
-void	bbquad(t_bbox *this, t_quad quadrilater);
+void		bb2seg(t_bbox2 *this, t_seg2 seg);
+void		bbtri(t_bbox *this, t_tri triangle);
+void		bbquad(t_bbox *this, t_quad quadrilater);
 
 void		mxquad3(const t_quad source, t_quad destination, t_mx4 matrix);
 void		mxquad4(const t_quad source, t_v4 destination[4], t_mx4 matrix);

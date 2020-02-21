@@ -1,7 +1,7 @@
 SRCS = \
 	mxinit.c mxcpy.c \
 	mxdet.c mxtrans.c mxadj.c mxinv.c mxm.c mxv.c mxfig.c \
-	mxeuler.c mxproj.c \
+	mxeuler.c mxangle.c mxproj.c \
 	cartesian.c \
 	addvec.c subvec.c scalevec.c \
 	dotprod.c crossp.c \
@@ -9,13 +9,14 @@ SRCS = \
 	figcontain.c \
 	plane.c \
 	boundingbox.c boundingbox2.c \
+	boundingbox2d.c boundingbox2dinter.c \
 
 OBJS = ${SRCS:.c=.o}
 
 NAME = libftmath.a
 
 CC     = gcc
-CFLAGS = -Wall -Wextra #-Werror
+CFLAGS = -O3 -Wall -Wextra -Werror
 
 
 ${NAME}: ${OBJS}

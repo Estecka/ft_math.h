@@ -24,6 +24,17 @@ extern float	mx2det(const t_mx2 m)
 }
 
 /*
+** Computes a 2x2 matrix's determinant.
+** @param const t_mx3 m	A 3x3 matrix containing the 2x2 matrix.
+** @return float The determinant.
+*/
+
+extern float	mx3det2(const t_mx3 m)
+{
+	return ((m[0][0] * m[1][1]) - (m[0][1] * m[1][0]));
+}
+
+/*
 ** Computes a 3x3 matrix's determinant.
 ** @param const t_mx3 m The matrix whose determinant to compute.
 ** @return float The determinant.

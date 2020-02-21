@@ -35,6 +35,10 @@ void		mx4eulerz(t_mx4 this, float angle);
 void		mx4euler(t_mx4 this, const t_v3 *angles);
 void		mx4pos(t_mx4 this, const t_v3 *position);
 
+void		mx2angle(t_mx2 this, float angles);
+void		mx3angle(t_mx3 this, float angles);
+void		mx3pos(t_mx3 this, const t_v2 *position);
+
 void		mxfrust(t_mx4 out, const t_bbox *frustrum);
 
 void		mx4trans(const t_mx4 matrix, t_mx4 destination);
@@ -44,10 +48,12 @@ void		mx3adjt(const t_mx3 transposed, t_mx3 destination);
 
 float		mx2det(const t_mx2 matrix);
 float		mx3det(const t_mx3 matrix);
+float		mx3det2(const t_mx3 matrix);
 float		mx4det3(const t_mx4 matrix);
 
 void		mx2inv(const t_mx2 matrix, t_mx2 destination);
 void		mx3inv(const t_mx3 matrix, t_mx3 destination);
+void		mx3invaff(const t_mx3 matrix, t_mx3 destination);
 void		mx4invaff(const t_mx4 matrix, t_mx4 destination);
 
 union u_v2	mx2v2(const t_mx2 matrix, const t_v2 *vector);
