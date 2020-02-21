@@ -2,6 +2,7 @@ SRCS = \
 	mxinit.c mxcpy.c \
 	mxdet.c mxtrans.c mxadj.c mxinv.c mxm.c mxv.c mxfig.c \
 	mxeuler.c mxangle.c mxproj.c \
+	mxremap.c \
 	cartesian.c \
 	addvec.c subvec.c scalevec.c \
 	dotprod.c crossp.c \

@@ -39,6 +39,8 @@ void		mx2angle(t_mx2 this, float angles);
 void		mx3angle(t_mx3 this, float angles);
 void		mx3pos(t_mx3 this, const t_v2 *position);
 
+void		mx3remap(t_mx3 this, const t_bbox2 *from, const t_bbox2 *to);
+
 void		mxfrust(t_mx4 out, const t_bbox *frustrum);
 
 void		mx4trans(const t_mx4 matrix, t_mx4 destination);
