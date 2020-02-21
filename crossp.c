@@ -58,3 +58,17 @@ extern union u_v3	normale(const t_v3 *figure)
 	subvec3(&j, &figure[1], &figure[0]);
 	return (crossp3(&i, &j));
 }
+
+/*
+** Computes the normale of a segment.
+** @param const t_v2 segment	The segment whose normale to find.
+** @return struct s_v2	The normale.
+*/
+
+extern struct s_v2	normale2d(const t_v2 *seg)
+{
+	return ((t_v2){
+		.x = seg[1].y - seg[0].y,
+		.y = seg[0].x - seg[1].x,
+	});
+}

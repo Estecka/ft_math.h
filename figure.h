@@ -56,6 +56,7 @@ float		planez(const t_v4 *equation, const t_v3 *point);
 short		tricontain(const t_v2 *point, const t_tri triangle);
 short		quadcontain(const t_v2 *point, const t_quad quadrilater);
 union u_v3	normale(const t_v3 *figure);
+union u_v2	normale2d(const t_v2 *segment);
 
 void		bb2seg(t_bbox2 *this, t_seg2 seg);
 void		bbtri(t_bbox *this, t_tri triangle);
