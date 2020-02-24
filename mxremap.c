@@ -22,12 +22,12 @@
 
 extern void	mx3remap(t_mx3 this, const t_bbox2 *fro, const t_bbox2 *to)
 {
-	this[0][0] = (to->max.x - to->min.x) / (fro->max.x - fro->max.x);
+	this[0][0] = (to->max.x - to->min.x) / (fro->max.x - fro->min.x);
 	this[0][1] = 0;
 	this[1][0] = 0;
-	this[1][1] = (to->max.y - to->min.y) / (fro->max.y - fro->max.y);
-	this[2][0] = to->min.x - fro->min.x;
-	this[2][1] = to->min.y - fro->min.y;
+	this[1][1] = (to->max.y - to->min.y) / (fro->max.y - fro->min.y);
+	this[2][0] = to->min.x - (fro->min.x * this[0][0]);
+	this[2][1] = to->min.y - (fro->min.y * this[1][1]);
 	this[0][2] = 0;
 	this[1][2] = 0;
 	this[2][2] = 1;
