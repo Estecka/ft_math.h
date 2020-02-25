@@ -12,6 +12,9 @@
 
 #include "matrix.h"
 
+#define MIN 0
+#define MAX 1
+
 /*
 ** Creates a matrix that remaps one range to another.
 ** @param t_mx3 this	the matrix to initialize.
@@ -31,4 +34,10 @@ extern void	mx3remap(t_mx3 this, const t_bbox2 *fro, const t_bbox2 *to)
 	this[0][2] = 0;
 	this[1][2] = 0;
 	this[2][2] = 1;
+}
+
+extern void m2x1remap(float this[2][1], float fro[2], float to[2])
+{
+	this[0][0] = (to[MAX] - to[MIN]) / (fro[MAX] - fro[MIN]);
+	this[1][0] = to[MIN] - (fro[MIN] * this[0][0]);
 }
