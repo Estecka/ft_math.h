@@ -19,6 +19,12 @@
 ** @param t_m dst Ouputs the resulting matrix.
 */
 
+void		mxm2a(const t_mx2a m, const t_mx2a v, t_mx2a dst)
+{
+	dst[0][0] = m[0][0] * v[0][0];
+	dst[1][0] = (m[1][0] * v[0][0]) + m[1][0];
+}
+
 extern void	mxm2(const t_mx2 m, const t_mx2 v, t_mx2 dst)
 {
 	dst[0][0] = (v[0][0] * m[0][0]) + (v[0][1] * m[1][0]);

@@ -20,6 +20,7 @@ typedef float*const	*t_mx;
 typedef float		t_mx4[4][4];
 typedef float		t_mx3[3][3];
 typedef float		t_mx2[2][2];
+typedef float		t_mx2a[2][1];
 
 void		mx2init(t_mx2 matrix);
 void		mx3init(t_mx3 matrix);
@@ -68,6 +69,7 @@ union u_v4	mx4v4(const t_mx4 matrix, const t_v4 *vector);
 void		mxm2(const t_mx2 parent, const t_mx2 child, t_mx2 destination);
 void		mxm3(const t_mx3 parent, const t_mx3 child, t_mx3 destination);
 void		mxm4(const t_mx4 parent, const t_mx4 child, t_mx4 destination);
+void		mxm2a(const t_mx2a parent, const t_mx2a child, t_mx2a destination);
 
 union u_v3	cartesian(const t_v4 *vector);
 union u_v4	homegeneous(const t_v3 *vector, const t_mx4 matrix);
