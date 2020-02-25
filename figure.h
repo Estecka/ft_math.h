@@ -53,6 +53,10 @@ float		planex(const t_v4 *equation, const t_v3 *point);
 float		planey(const t_v4 *equation, const t_v3 *point);
 float		planez(const t_v4 *equation, const t_v3 *point);
 
+union u_v3	lineeq(const t_v2 *normale, const t_v2 *point);
+float		linex(const t_v3 *equation, const t_v2 *point);
+float		liney(const t_v3 *equation, const t_v2 *point);
+
 short		tricontain(const t_v2 *point, const t_tri triangle);
 short		quadcontain(const t_v2 *point, const t_quad quadrilater);
 union u_v3	normale(const t_v3 *figure);
