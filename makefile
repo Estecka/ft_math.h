@@ -1,6 +1,7 @@
 SRCS = \
 	mxinit.c mxcpy.c \
-	mxdet.c mxtrans.c mxadj.c mxinv.c mxm.c mxv.c mxfig.c \
+	mxdet.c mxtrans.c mxadj.c mxinv.c \
+	mxm.c mxv.c mxav.c mxfig.c \
 	mxeuler.c mxangle.c mxproj.c \
 	mxremap.c \
 	cartesian.c \
@@ -8,7 +9,7 @@ SRCS = \
 	dotprod.c crossp.c \
 	floatminmax.c \
 	figcontain.c \
-	plane.c \
+	plane.c line2d.c\
 	boundingbox.c boundingbox2.c \
 	boundingbox2d.c boundingbox2dinter.c \
 
