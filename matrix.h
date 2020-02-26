@@ -66,6 +66,7 @@ union u_v3	mx3v2(const t_mx3 matrix, const t_v2 *vector);
 union u_v3	mx3v3(const t_mx3 matrix, const t_v3 *vector);
 union u_v4	mx4v3(const t_mx4 matrix, const t_v3 *vector);
 union u_v4	mx4v4(const t_mx4 matrix, const t_v4 *vector);
+float		mx2av1(const t_mx2a matrix, float value);
 
 void		mxm2(const t_mx2 parent, const t_mx2 child, t_mx2 destination);
 void		mxm3(const t_mx3 parent, const t_mx3 child, t_mx3 destination);
