@@ -22,7 +22,7 @@
 extern void	mx2ainv(const t_mx2a m, t_mx2a mi)
 {
 	mi[0][0] = 1 / m[0][0];
-	mi[1][0] = mi[0][0] * m[1][0];
+	mi[1][0] = -mi[0][0] * m[1][0];
 }
 
 /*
