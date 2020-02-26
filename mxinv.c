@@ -13,6 +13,19 @@
 #include "matrix.h"
 
 /*
+** Computes a 2x1 matrix's inverse.
+** Inversion can be done in-place.
+** @param const t_mx2a m	The matrix to inverse.
+** @param t_mx2a mi	Outputs the inverted matrix.
+*/
+
+extern void	mx2ainv(const t_mx2a m, t_mx2a mi)
+{
+	mi[0][0] = 1 / m[0][0];
+	mi[1][0] = mi[0][0] * m[1][0];
+}
+
+/*
 ** Computes a 2x2 matrix's inverse.
 ** @param const t_mx2 m The matrix to inverse.
 ** @param t_mx2 mi Outputs the inverted matrix.

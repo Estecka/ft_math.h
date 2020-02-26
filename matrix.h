@@ -56,6 +56,7 @@ float		mx3det2(const t_mx3 matrix);
 float		mx4det3(const t_mx4 matrix);
 
 void		mx2inv(const t_mx2 matrix, t_mx2 destination);
+void		mx2ainv(const t_mx2a matrix, t_mx2a destination);
 void		mx3inv(const t_mx3 matrix, t_mx3 destination);
 void		mx3invaff(const t_mx3 matrix, t_mx3 destination);
 void		mx4invaff(const t_mx4 matrix, t_mx4 destination);
