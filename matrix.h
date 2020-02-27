@@ -44,6 +44,7 @@ void		mx3remap(t_mx3 this, const t_bbox2 *from, const t_bbox2 *to);
 void		m2x1remap(float this[2][1], float from[2], float to[2]);
 
 void		mxfrust(t_mx4 out, const t_bbox *frustrum);
+void		mxfrust2d(t_mx3 out, const t_bbox2 *frustrum);
 
 void		mx4trans(const t_mx4 matrix, t_mx4 destination);
 
@@ -75,5 +76,8 @@ void		mxm2a(const t_mx2a parent, const t_mx2a child, t_mx2a destination);
 
 union u_v3	cartesian(const t_v4 *vector);
 union u_v4	homegeneous(const t_v3 *vector, const t_mx4 matrix);
+union u_v2	cartesian2d(const t_v3 *vector);
+union u_v3	homegeneous2d(const t_v2 *vector, const t_mx3 matrix);
+float		depthunproject2d(float depth, const t_mx3 matrix);
 
 #endif
